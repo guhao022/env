@@ -5,7 +5,7 @@
 ## 安装
 
 ```shell
-go get github.com/guhao022/env
+go get github.com/num5/env
 ```
 
 ## 使用
@@ -18,7 +18,7 @@ HOST=localhost
 package main
 
 import (
-    "github.com/guhao022/env"
+    "github.com/num5/env"
     "fmt"
     "os"
 )
@@ -46,7 +46,7 @@ func main() {
 package main
 
 import (
-    "github.com/guhao022/env"
+    "github.com/num5/env"
     "fmt"
 )
 
