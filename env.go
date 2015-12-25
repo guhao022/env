@@ -13,7 +13,7 @@ type Env struct {
 	values map[string]string
 }
 
-func New(set bool, files ...string) (*Env, error) {
+func Load(set bool, files ...string) (*Env, error) {
 	if len(files) == 0 {
 		files = []string{".env"}
 	}
