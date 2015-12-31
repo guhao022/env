@@ -74,8 +74,9 @@ func (env *Env) readFile(file string) error {
 
 func (env *Env) set() {
 	for key, value := range env.values {
-		if os.Getenv(key) == "" {
-			os.Setenv(key, value)
+		k := strings.ToUpper(key)
+		if os.Getenv(k) == "" {
+			os.Setenv(k, value)
 		}
 	}
 }
