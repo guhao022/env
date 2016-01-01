@@ -24,7 +24,7 @@ import (
 )
 
 func main() {
-  _, err := env.Load(true)
+  _, err := env.Load()
   if err != nil {
     fmt.Println(err)
   }
@@ -41,27 +41,4 @@ func main() {
 }
 ```
 
-不加载到环境变量,直接把env文件当做配置文件来使用
-```golang
-package main
-
-import (
-    "github.com/num5/env"
-    "fmt"
-)
-
-// Load第一个参数设置为false
-func main() {
-  dict, err := env.Load(false, ".env", "conf.env")
-  if err != nil {
-    fmt.Println(err)
-  }
-  
-  // 获取.env文件HOST的内容
-  host := env.Get("HOST")
-  
-  fmt.Println(host)
-  
-}
-```
 
