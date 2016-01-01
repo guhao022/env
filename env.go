@@ -13,7 +13,7 @@ type Env struct {
 	values map[string]string
 }
 
-func Load(set bool, files ...string) (*Env, error) {
+func Load(files ...string) (*Env, error) {
 	if len(files) == 0 {
 		files = []string{".env"}
 	}
@@ -29,9 +29,7 @@ func Load(set bool, files ...string) (*Env, error) {
 		return nil, err
 	}
 
-	if set {
-		env.set()
-	}
+	env.set()
 
 	return env, nil
 }
